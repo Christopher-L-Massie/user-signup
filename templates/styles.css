@@ -1,0 +1,11 @@
+table {
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
+
+.container{
+    margin-left: 50%;
+}

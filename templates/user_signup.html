@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>User Signup Page</h1>
+    <form method='POST'>
+        <table id="usersignup">
+            <tbody>
+                <tr>
+                    <td>
+                        <label>Username:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" value='{{username}}'>
+                    </td>
+                    <td>
+                        <!-- usernam Error message (min 3 max 20 characters) -->
+                        <p class="error">{{username_error}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" name="pass">
+                    </td>
+                    <td>
+                        <!-- invalid password Error message (too short) -->
+                        <p class="error">{{password_error}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Verify Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" name="verifypass">
+                    </td>
+                    <td>
+                        <!-- Password don't match Error message -->
+                        <p class="error">{{verify_password_error}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Email (optional):</label>
+                    </td>
+                    <td>
+                        <input type="text" name="email" value='{{email}}'>
+                    </td>
+                    <td>
+                        <!-- Email Error message -->
+                        <p class="error">{{email_error}}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <input type="submit">
+    </form>
+
+
+
+
+{% endblock %}
